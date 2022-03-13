@@ -55,7 +55,7 @@ public class JsonServlet extends HttpServlet {
 
         try (OutputStream out = response.getOutputStream()) {
             JsonWriter jsonw = Json.createWriter(out);
-            jsonw.write(jsonObject);
+            jsonw.writeObject(jsonObject);
             jsonw.close();
         }
     }
