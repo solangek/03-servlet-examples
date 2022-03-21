@@ -26,6 +26,7 @@ public class ServletParams extends HttpServlet {
         appName = this.getServletContext().getInitParameter("appname");
         // servlet init parameter defined above with annotation @WebInitParam
         coutryName = this.getServletConfig().getInitParameter("country");
+        // servlet init parameter defined in web.xml
         getServletContext().setAttribute("myquestions", "Java, C#, C++");
 
     }

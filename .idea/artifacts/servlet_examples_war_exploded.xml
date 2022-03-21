@@ -2,47 +2,16 @@
   <artifact type="exploded-war" name="servlet-examples:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/servlet_examples_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="servlet-examples/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="03-servlet-examples" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="org.glassfish:javax.json:1.1.4" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/el-api.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/jasper.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/jsp-api.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/catalina.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/ecj-4.15.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/jasper-el.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/jaspic-api.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-api.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-jni.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/catalina-ha.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/servlet-api.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-dbcp.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-jdbc.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-util.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/catalina-ant.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/catalina-ssi.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-coyote.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/websocket-api.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-cs.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-de.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-es.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-fr.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-ja.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-ko.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-ru.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/annotations-api.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/catalina-tribes.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-util-scan.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-websocket.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-pt-BR.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/tomcat-i18n-zh-CN.jar" />
-          <element id="file-copy" path="/Applications/apache-tomcat-9.0.34/lib/catalina-storeconfig.jar" />
+          <element id="library" level="project" name="javax.servlet:javax.servlet-api:4.0.1" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="03-servlet-examples/web/Web" />
     </root>
   </artifact>
 </component>
