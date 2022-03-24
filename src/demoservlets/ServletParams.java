@@ -1,5 +1,6 @@
 package demoservlets;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -19,9 +20,12 @@ public class ServletParams extends HttpServlet {
 
     /**
      * Initialize the servlet with the servlet context and config parameters.
+     * A servlet has a zero-argument constructor. We must implement this method
+     * to initialize the servlet and call the superclass implementation.
      */
     @Override
-    public void init() {
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
         // application wide parameter stored in web.xml
         appName = this.getServletContext().getInitParameter("appname");
         // servlet init parameter defined above with annotation @WebInitParam
