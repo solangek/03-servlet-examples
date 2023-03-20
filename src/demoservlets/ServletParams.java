@@ -32,7 +32,7 @@ public class ServletParams extends HttpServlet {
         coutryName = this.getServletConfig().getInitParameter("country");
         // servlet init parameter defined in web.xml
         getServletContext().setAttribute("myquestions", "Java, C#, C++");
-
+        System.out.println("ServletParams initialized");
     }
 
     /**

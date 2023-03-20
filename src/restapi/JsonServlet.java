@@ -10,6 +10,8 @@ import demoservlets.Dummy;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
+import com.google.gson.Gson;
+
 
 import java.util.Vector;
 import javax.servlet.annotation.WebServlet;
@@ -38,7 +40,13 @@ public class JsonServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // very important:
+
+        // check that it is an ajax request
+//        if (!"XMLHttpRequest".equals(request.getHeader("X-Requested-With"))) {
+//            response.sendError(HttpServletResponse.SC_FORBIDDEN);
+//            return;
+//        }
+        // Servlet a general purpose class, we need to set the content type
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 
@@ -46,18 +54,25 @@ public class JsonServlet extends HttpServlet {
         // { "name":"...", "value": "..." }
 
         Dummy d = new Dummy(55);
-        // return d as JSON
-        JsonObjectBuilder builder = Json.createObjectBuilder();
-        builder.add("name", d.getName());
-        builder.add("value", d.getDummyInt());
 
-        JsonObject jsonObject = builder.build();
+        // return JSON using GSon
+        Gson g = new Gson();
+        String json = g.toJson(d);
+        // write response
+        response.getWriter().write(json);
 
-        try (OutputStream out = response.getOutputStream()) {
-            JsonWriter jsonw = Json.createWriter(out);
-            jsonw.writeObject(jsonObject);
-            jsonw.close();
-        }
+        // return d as JSON using javax.json
+//        JsonObjectBuilder builder = Json.createObjectBuilder();
+//        builder.add("name", d.getName());
+//        builder.add("value", d.getDummyInt());
+//
+//        JsonObject jsonObject = builder.build();
+//
+//        try (OutputStream out = response.getOutputStream()) {
+//            JsonWriter jsonw = Json.createWriter(out);
+//            jsonw.writeObject(jsonObject);
+//            jsonw.close();
+//        } // no catch, we're using try-with-resources to close the stream
     }
 
     /**
