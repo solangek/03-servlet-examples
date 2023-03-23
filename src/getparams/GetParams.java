@@ -18,6 +18,14 @@ import java.io.PrintWriter;
 @WebServlet(name = "getParams", urlPatterns = "/GetParams")
 public class GetParams extends HttpServlet {
 
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        // this is the current path to the webapp directory (the compiled classes)
+        String currentDir = getServletContext().getRealPath(".");
+        System.out.println("currentDir = " + currentDir);
+    }
+
     /**
      * Display the request parameters in the response
      * @param request the request
