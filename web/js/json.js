@@ -7,7 +7,7 @@
                 }})
                 .then(res => res.json())
                 .then(resp => {
-                    res = "<p>name: " + resp.name + "</p><p>value: " + resp.value;
+                    res = "<p>name: " + resp.name + "</p><p>value: " + resp.dummyInt;
 
                     document.getElementById("data").innerHTML = res;
                 })
